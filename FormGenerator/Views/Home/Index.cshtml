@@ -1,0 +1,62 @@
+﻿@model FormGenerator.Models.RawFormModel
+@{
+    ViewBag.Title = "Form Generator";
+}
+
+
+<div style="text-align: center;">
+    <h2>Вставьте данные в виде json для генерации html-форм</h2>
+</div>
+@using (Html.BeginForm("GenerateForm", "FormView", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", style = "height: 90%;", id = "jsonForm"}))
+{
+    <div class="form-group" style="height: 70%;">
+        <div class="row">
+            @Html.LabelFor(m => m.Json, new { @class = "control-label col-md-1" })
+        </div>
+        <div class="row" style="height: 90%;">
+            <div class="col-md-12" style="height: 100%;">
+                @Html.TextAreaFor(m => m.Json, new { @class = "form-control", style = "height: 90%;", id = "jsonText" } )
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-5 col-md-7">
+            <input type="submit" value="Сгенерировать" class="btn btn-success btn-lg" />
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+    $('#jsonForm').submit(function (ev) {
+        $("#jsonText").val(escapeHTML($("#jsonText").val()));
+        this.submit();
+    });
+
+    var escapeChars = {
+        '¢': 'cent',
+        '£': 'pound',
+        '¥': 'yen',
+        '€': 'euro',
+        '©': 'copy',
+        '®': 'reg',
+        '<': 'lt',
+        '>': 'gt',
+        '"': 'quot',
+        '&': 'amp',
+        '\'': '#39'
+    };
+
+    var regexString = '[';
+    for (var key in escapeChars) {
+        regexString += key;
+    }
+    regexString += ']';
+
+    var regex = new RegExp(regexString, 'g');
+
+    function escapeHTML(str) {
+        return str.replace(regex, function (m) {
+            return '&' + escapeChars[m] + ';';
+        });
+    };
+</script>

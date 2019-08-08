@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormGenerator", "FormGenerator\FormGenerator.csproj", "{557EC0C3-5772-475B-9551-697D594815A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C03A5F6D-1487-48ED-9DA4-85018AA4718A} = {C03A5F6D-1487-48ED-9DA4-85018AA4718A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormGenerator.Model", "FormGenerator.Model\FormGenerator.Model.csproj", "{C03A5F6D-1487-48ED-9DA4-85018AA4718A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{557EC0C3-5772-475B-9551-697D594815A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557EC0C3-5772-475B-9551-697D594815A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557EC0C3-5772-475B-9551-697D594815A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557EC0C3-5772-475B-9551-697D594815A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03A5F6D-1487-48ED-9DA4-85018AA4718A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03A5F6D-1487-48ED-9DA4-85018AA4718A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03A5F6D-1487-48ED-9DA4-85018AA4718A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03A5F6D-1487-48ED-9DA4-85018AA4718A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7109B76-A9A9-41DE-ADD9-B5D665575949}
+	EndGlobalSection
+EndGlobal
