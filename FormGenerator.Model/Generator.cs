@@ -35,10 +35,8 @@ namespace FormGenerator.Model
             }
 
             html += $"<div id=\'postMsg\' style=\'display: none;\'>{form.Postmessage}</div>";
-            var postMsg = "<script src=\"/FormGenerator/Scripts/FormScript.js\"></script>";
 
-            return html + postMsg;
-            //return $"<form onsubmit=\'send(); return false;\'>{html + postMsg}</form>";
+            return html;
         }
     }
 }
